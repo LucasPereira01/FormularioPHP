@@ -14,9 +14,9 @@ session_start();
 </head>
 
 <body>
-    <p>
-    <h1>Formulario para Inscrição de Competidores</h1>Formulario para Inscrição de Competidores</p>
+<div class="formulario">
 
+    <h1>Formulario para Inscrição de Competidores</h1>
     <form action="script.php" method="post">
         <?php
         $menssagemDeSucesso = isset($_SESSION['menssagem de sucesso']) ?  $_SESSION['menssagem de sucesso'] : '';
@@ -32,9 +32,13 @@ session_start();
         ?>
         <p>Seu Nome <input type="text" name="nome"></p>
         <p>Sua Idade <input type="text" name="idade"></p>
-        <p>Enviar Dados do Competidor<input type="submit"></p>
+        <p>Enviar Dados do Competidor</p>
+        <input class="botao" type="submit">
 
     </form>
+
+</div>
+    
 
 </body>
 

@@ -30,7 +30,7 @@ else if (!is_numeric($idade)) {
 if ($idade >= 0 && $idade <= 12) {
     for ($i = 0; $i <= count($categorias); $i++) {
         if ($categorias[$i] == "Infantil"){
-            $_SESSION['menssagem de sucesso'] = "O nadador " . $nome . " compete na categoria Infatil";
+            $_SESSION['menssagem de sucesso'] = "O Nadador " . $nome . " compete na categoria Infatil";
             header("location: intro.php");
             return;
         }
@@ -38,7 +38,7 @@ if ($idade >= 0 && $idade <= 12) {
 } else if ($idade >= 13 && $idade <= 18) {
     for ($i = 0; $i <= count($categorias); $i++) {
         if ($categorias[$i] == "Adolecente"){
-            $_SESSION['menssagem de sucesso'] = "O nadador " . $nome . " compete na categoria Adolecente";
+            $_SESSION['menssagem de sucesso'] = "O Nadador " . $nome . " compete na categoria Adolecente";
             header("location: intro.php");
             return;
         }
@@ -46,7 +46,7 @@ if ($idade >= 0 && $idade <= 12) {
 } else if ($idade >= 18 && $idade <= 65) {
     for ($i = 0; $i <= count($categorias); $i++) {
         if ($categorias[$i] == "Adulto"){
-            $_SESSION['menssagem de sucesso'] =  "O nadador " . $nome . " compete na categoria Adulto";
+            $_SESSION['menssagem de sucesso'] =  "O Nadador " . $nome . " compete na categoria Adulto";
             header("location: intro.php");
             return;
         }
@@ -54,7 +54,7 @@ if ($idade >= 0 && $idade <= 12) {
 } else {
     for ($i = 0; $i <= count($categorias); $i++) {
         if ($categorias[$i] == "Idoso"){
-            $_SESSION['menssagem de sucesso'] = "O nadador " . $nome . " compete na categoria Idoso";
+            $_SESSION['menssagem de sucesso'] = "O Nadador " . $nome . " compete na categoria Idoso";
             header("location: intro.php");
             return;
         }

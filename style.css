@@ -1,0 +1,26 @@
+.formulario{
+    background-color: rgb(211, 224, 216);
+    height: 300px;
+    width: 450px;
+    margin-left: 25%;
+    border-radius: 30px;
+    padding-top: 20px;
+} 
+
+p,form,h1{
+    text-align: center;
+    font-size: 20px;
+}
+    
+input{
+    border-radius: 20px;
+    color: rgb(3, 5, 4);
+}
+
+.botao{
+    width: 100px;
+    height: 35px;
+    border-radius: 20px;
+    color: rgb(3, 5, 4);
+    background-color: rgb(125, 160, 142);
+}
