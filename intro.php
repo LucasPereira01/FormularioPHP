@@ -1,5 +1,5 @@
 <?php
-session_start();
+include "./servicos/servicoMensagemSessao.php";
 ?>
 
 <!DOCTYPE html>
@@ -14,31 +14,29 @@ session_start();
 </head>
 
 <body>
-<div class="formulario">
+    <div class="formulario">
 
-    <h1>Formulario para Inscrição de Competidores</h1>
-    <form action="script.php" method="post">
-        <?php
-        $menssagemDeSucesso = isset($_SESSION['menssagem de sucesso']) ?  $_SESSION['menssagem de sucesso'] : '';
-        if (!empty($menssagemDeSucesso)) {
-            echo $menssagemDeSucesso;
-        } else {
-            $menssagemDeErro = isset($_SESSION['menssagem de erro']) ?  $_SESSION['menssagem de erro'] : '';
-            if (!empty($menssagemDeErro)) {
-                echo $menssagemDeErro;
+        <h1>Formulario para Inscrição de Competidores</h1>
+        <form action="script.php" method="post">
+            <?php
+            $mensagemDeSucesso = obterMensagemSucesso() ;
+                if (!empty($mensagemDeSucesso)){
+                    echo $mensagemDeSucesso;
+                }
+            $mensagemDeErro = obterMensagemErro();
+            if (!empty($mensagemDeErro)) {
+                echo $mensagemDeErro;
             }
-        }
+            ?>
+            <p>Seu Nome <input type="text" name="nome"></p>
+            <p>Sua Idade <input type="text" name="idade"></p>
+            <p>Enviar Dados do Competidor</p>
+            <input class="botao" type="submit">
 
-        ?>
-        <p>Seu Nome <input type="text" name="nome"></p>
-        <p>Sua Idade <input type="text" name="idade"></p>
-        <p>Enviar Dados do Competidor</p>
-        <input class="botao" type="submit">
+        </form>
 
-    </form>
+    </div>
 
-</div>
-    
 
 </body>
 
